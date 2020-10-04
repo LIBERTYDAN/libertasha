@@ -1,0 +1,32 @@
+#water {
+    z-index: 0;
+    background-color: rgba(0,0,255,0.4);
+    position: absolute;
+    overflow-y: hidden;
+    transition-property: all;
+    transition-duration: 3.0s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+#bigDiv {
+    z-index: 1;
+    height: 300px;
+    position: relative;
+}
+#v {
+    margin-top: -26px;
+    height: 26px;
+    background-color:#DEFF97;
+}
+#veryBig {
+    border: 3px solid;
+    direction: rtl;
+    z-index: 1;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    position: relative;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}

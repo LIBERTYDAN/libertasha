@@ -1,0 +1,118 @@
+#table_div{
+  margin-top: 15px;
+  margin-right:8%;
+  margin-left:8%;
+}
+
+
+
+table {
+  border-spacing: 0px;
+  table-layout:fixed;
+  max-height: 600px;
+  overflow-x:auto;
+  display: block;
+  direction: rtl;
+}
+
+tbody{
+  display:block;
+}
+
+tbody tr {
+    display:table;
+    table-layout:fixed;
+}
+
+td, th {
+  font-size: 20px;
+  height: 120px;
+  background-color: rgb(0, 170, 255);
+  width: 120px;
+  min-width: 120px;
+  text-align: center;
+  padding: 8px;
+  padding: 10px;
+  position: relative;
+  outline: 0;
+  overflow: hidden;
+  border: 3px solid;
+}
+
+th {
+  position: static;
+}
+
+button {
+  font-size: 14px;
+  width: 165px;
+  height:60px;
+  background-color: lightblue;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input{
+  z-index: 5;
+  width: 100px;
+  padding: 10px 20px;
+  margin: 2px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#table_control{
+  text-align:center;
+  margin-top:10; 
+}
+
+
+
+
+/*
+body:not(.nohover) tbody tr:hover {
+  background-color: rgba(0,0,255,0.1);
+}
+
+td:hover::after,
+thead th:not(:empty):hover::after,
+td:focus::after,
+thead th:not(:empty):focus::after { 
+  content: '';  
+  height: 10000px;
+  left: 0;
+  position: absolute;  
+  top: -5000px;
+  width: 270px;
+  z-index: -1;
+}
+
+td:hover::after,
+th:hover::after {
+  background-color: rgba(0,0,255,0.1);
+}
+
+td:focus::after,
+th:focus::after {
+  background-color: lightblue;
+}
+
+/* Focus stuff for mobile
+td:focus::before,
+tbody th:focus::before {
+  background-color: lightblue;
+  content: '';  
+  height: 100%;
+  top: 0;
+  left: -5000px;
+  position: absolute;  
+  width: 10000px;
+  z-index: -1;
+}
+*/

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>חלוקה צודקת</title>
+
+	<link rel="stylesheet" type="text/css" href="css/main_css.css">
+	<link rel="stylesheet" type="text/css" href="css/navi.css">
+	<link rel="stylesheet" type="text/css" href="css/table.css">
+	<link rel="stylesheet" type="text/css" href="css/vessels.css">
+
+	<script src = "js/jszip.js" type="text/javascript"></script>
+	<script src = "js/FileSaver.js" type="text/javascript" charset="utf-8"></script>
+    <script src = "js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src = "js/xl_down.js" type="text/javascript"></script>
+    <script src = "js/myexcel.js" type="text/javascript"></script>
+    <script src = "js/main_algorithm.js" type="text/javascript" charset="utf-8"></script>
+    <script src = "js/vessels.js" type="text/javascript"></script>
+    <script src = "js/zl.js" type="text/javascript"></script>
+</head>
+<body dir="rtl">
+	<img src="resources/banner.jpeg" alt="banner"> 
+	<ul>
+		<li><a href="#home">בית</a></li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">מאמרים</a>
+			<div class="dropdown-content">
+				<a href="http://www.ma.huji.ac.il/~raumann/pdf/45.pdf">מאמר מתמטי</a>
+				<a href="http://www.ma.huji.ac.il/~raumann/pdf/Man%20with%20Three%20Wives.pdf">מאמר למדני</a>
+				<a href="http://www.math.huji.ac.il/~raumann/documents/shita.pdf">מאמר עדכני</a>
+			</div>
+		</li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">תנאי שימוש</a>
+			<div class="dropdown-content" id="tnai_shimush">
+				<p>
+					פיתוח תוכנה ואתר: אור דוד
+				</p>
+				<p>
+					עיצוב לוגו: סטודיו יגאל גבאי
+				</p>
+				<p>
+					יזם ובעל זכות יוצרים: דן ליברטי
+				</p>
+				<p>
+					תנאי שימוש:
+				</p>
+				<p> 	
+					1.	האתר "חלוקה צודקת –  מחשבון לחלוקת משאבים מוגבלים" על כל רכיביו; התוכנה; השם והלוגו LiberTasha Software; המכונים לקמן, ביחד ולחוד, בשם "יצירה" – מוגנים על פי דיני זכויות יוצרים.
+				</p>
+				<p>						
+					2.	אין לעשות שימוש מסחרי ביצירה ללא קבלת רשות בכתב מבעל זכות היוצרים.
+				</p>
+				<p>
+					3.	הסתמכות על חישובי התוכנה והאתר הינן על אחריות המשתמש בלבד.
+				</p>
+				<img id = "liber_logo" src="resources/Liber tasha logo.jpg">
+			</div>
+
+
+
+		</li>
+		<li class="dropdown">
+			<a class="dropbtn" href="mailto:tashalibertydan@gmail.com">צור קשר</a>
+			<div class="dropdown-content">
+				<a href="mailto:tashalibertydan@gmail.com">
+					לפניות נא צרו קשר באמצעות דוא"ל – tashalibertydan@gmail.com
+				</a>
+			</div>
+		</li>
+	</ul>
+
+	<div id="zl">
+		<p >
+			<center>
+				<strong>
+					ציון לנפש חיה
+				</strong>			
+			</center>
+		</p>
+		<p id = "zl_name"></p>
+		<img id = "ner_neshama" src="resources/ner_neshama.gif">
+	</div>
+
+	<div id = "body">
+		<div id="melel">	
+			<p class="melel" id = "first paragraph">
+				שאלות פשוטות הינן מתנת הבורא יתברך לאדם.
+			</p>
+			<p class="melel">
+				מילדות ועד שיבה, ממסיבת גן ועד תקציב המדינה, אנו חוזרים ושואלים - "איך לחלק את העוגה?".
+			</p>
+			<p class="melel">
+				תשיבו, מה הבעיה נעשה חלוקה צודקת, נחלק את העוגה בשווה - אבל מה זה "שווה" ?
+			</p>
+			<p class="melel">
+				השאלה מתחדדת כאשר העוגה קטנה, כולם רוצים לאכול, נדרשים ויתורים וצריך לקצץ.
+			</p>
+			<p class="melel">
+				בין אם המדובר בעזבון מוריש, חשבון פושט רגל, גמ"ח קהילתי, קרן מלגות ואפילו חלוקת רווחים בין שותפים - השגת "חלוקה צודקת" במציאות בה סך הדרישות גדול מהמשאב המוצע לחלוקה הינה אתגר אנושי חוצה תרבויות וזמנים.
+			</p>
+			<p class="melel">
+				במישור הטכני ניתן להעלות על הדעת שיטות מתמטיות שונות לביצוע חלוקה, והעדפת שיטת אחת על פני חברתה הינה במידה רבה שיקול ערכי.
+			</p>
+			<p class="melel">
+				במשנה במסכת כתובות (פ"י מ"ד) אנו מוצאים דיון מרתק בסוגיה. מדובר שם על אדם שנפטר והשאיר אחריו שלוש נשים. כל אחת מהנשים זכאית לכתובתה ואין העדפה לאשה אחת על פני חברתה. ברם, סך כל תביעות הנשים גדול מהעיזבון אשר הותיר אחריו הבעל.
+			</p>
+			<p class="melel">
+				כפתרון לבעיה מציג ר' נתן (ר"נ) במשנה שיטת חלוקה הנדונה בקיצור יחסי בדברי האמוראים בסוגיה על אתר (בבלי, כתובות צ"ג ע"א). הלכה למעשה פסקו הראשונים חלוקות שונות בהמשך לשיטת רבי בברייתא המובאת בגמרא. ואולם, שיטת ר' נתן היסודית המוצגת במשנה נותרה במשך דורות בגדר תעלומה.
+			</p>
+			<p class="melel">
+				בשנת תשמ"ה (1985) פרסם פרופ' ישראל אומן בשיתוף פרופ' מיכאל משלר ז"ל מאמר מקצועי פורץ דרך לפיו שיטת ר' נתן במשנה מבוססת על מודל מתמטי חדש-ישן המכונה "חלוקה תואמת שנים אוחזין" (תש"א) . המאמר עורר ענין רב בקהילייה המדעית ודיון פורה בקרב ציבור לומדי התורה עד עצם ימינו אלה. ניתן להעמיק בסוגיה ובשיטות החלוקה השונות הנגזרות ממנה במאמרים המצורפים.
+			</p>
+			<p class="melel">
+				מטרת האתר לספק כלי מעשי ליישום שיטות החלוקה השונות אשר נולדו בעקבות הדיון בסוגיה.
+			</p>
+			<p class="melel">
+				בטבלה פה למטה תמצאו מקום להזין את המשאב (העוגה) ואת תביעות הצדדים המבקשים את החלוקה (שם + טענה). באפשרותכם להעמיד כל סכום, מספר צדדים ותביעות כרצונכם ולקבל מנה בהתאם לשיטות החלוקה השונות כערך מספרי ובאחוזים (מסך כל התביעה). הסתמכות על תוצאות החישובים הינה על אחריות המשתמש בלבד.
+			</p>
+		</div>
+
+
+		<div id = "table_div">
+			<table id="mainTable">
+				<thead>
+    				<tr id = "compute">
+    				    <th id = "blank">סוג חלוקה </th>
+    				</tr>
+    				<tr id = "heading">
+    				    <th id = "women_name" width="30%">
+    				        <p></p>
+    				    </th>
+    				    <th id = "first_col" width="20px" colspan="1">
+    				        <form onkeypress="return event.keyCode != 13">
+    				            <input type="number" id="estate" name="estate" placeholder="משאב">
+    				        </form>
+    				    </th>
+    				</tr>
+    			</thead>
+    			<tbody>    
+    				<tr id = "first_row">
+    				    <td id="00">                           
+    				            <form>
+    				                <input type="text" placeholder="שם">
+    				                <br>
+    				                <br>
+    				                <input type="number" placeholder="טענה">
+    				            </form>
+    				    </td>
+    				</tr>
+    			</tbody>
+			</table>
+		</div>
+		<div id = "table_control">
+			<button onclick='cnc("לפי מעות (יחסית), רבי לפי ר\"ח")'>לפי מעות (יחסית), רבי לפי ר"ח</button>
+			<button onclick='cnc("שוה מותנת, רבי לפי הרי\"ף")'>שוה מותנת, רבי לפי הרי"ף</button>
+			<button onclick='cnc("שיטת השעבודים, ר\"נ לפי הרי\"ף")'>שיטת השעבודים, ר"נ לפי הרי"ף</button>
+			<button onclick='cnc("על דרך שנים אוחזין, ר\"נ לפי רה\"ג")'>חלוקה תואמת שנים אוחזין, ר"נ לפי רה"ג</button>
+		</div>
+		<p class="melel">קיימת גם אפשרות לשמור את הטבלה שנוצרה כקובץ. לשמירה לחצו הדפס.
+		</p>
+		<button id = "print" onclick="down1()">הדפס טבלה</button>
+		<p class="melel">
+			בנוסף, בכדי להבין טוב יותר את הרציונל שמאחורי חלוקה תש"א יצרנו המחשה ויזואלית - ברגע שיוזנו בטבלה נתונים עבור חלוקה "תואמת שנים אוחזין" תציג אותם ההדמיה למטה כמערכת כלים שלובים (להרחבה ר' מאמר למדני בסרגל הניווט).
+		</p>
+		<div id = "demontartion"></div>
+		<div id="veryBig"><div id="bigDiv"><div id="water"></div></div><div id="v"></div></div>
+		<script type="text/javascript" src="js/main2.js"></script>
+	</div>
+</body>
+<html>
